@@ -163,7 +163,7 @@ export default function Home() {
       </Head>
       <Main>
         <Banner />
-        <BoldBigText>Meet our glorious geckos nft's!</BoldBigText>
+        <BoldBigText>Meet our glorious geckos NFTs!</BoldBigText>
         <RegularBigText>
           The next hottest Solana NFT Collection conformed by unique and
           Glorious Geckos waiting to move into your wallet.
