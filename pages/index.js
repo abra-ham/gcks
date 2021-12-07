@@ -18,11 +18,20 @@ const CardsWrapper = styled.section`
 const CardWrapper = styled.figure`
   height: 400px;
   width: 300px;
-  padding: 1rem;
+  padding: 10px;
   background-color: white;
-  border: 8px solid transparent;
-  border-image: url('/fade-border.png') 30 30 repeat;
-  border-radius: 5px;
+  background-image: url('/fade-border.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  display: flex;
+`
+
+const CardContent = styled.div`
+  flex: 1;
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
 `
 
 const Card = ({ text, title = 'Title' }) => {
@@ -35,8 +44,10 @@ const Card = ({ text, title = 'Title' }) => {
       activeOffset={2}
     >
       <CardWrapper>
-        <h1 data-atropos-offset="2">{title}</h1>
-        <p data-atropos-offset="4">{text}</p>
+        <CardContent>
+          <h1 data-atropos-offset="2">{title}</h1>
+          <p data-atropos-offset="4">{text}</p>
+        </CardContent>
       </CardWrapper>
     </Atropos>
   )
