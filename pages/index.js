@@ -22,14 +22,21 @@ const CardWrapper = styled.figure`
   background-color: white;
   border: 8px solid transparent;
   border-image: url('/fade-border.png') 30 30 repeat;
+  border-radius: 5px;
 `
 
 const Card = ({ text, title = 'Title' }) => {
   return (
-    <Atropos shadow shadowScale={0.5} shadowOffset={41}>
+    <Atropos
+      highlight={false}
+      shadow
+      shadowScale={1}
+      shadowOffset={500}
+      activeOffset={2}
+    >
       <CardWrapper>
-        <h1>{title}</h1>
-        <p>{text}</p>
+        <h1 data-atropos-offset="2">{title}</h1>
+        <p data-atropos-offset="4">{text}</p>
       </CardWrapper>
     </Atropos>
   )
