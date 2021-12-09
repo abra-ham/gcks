@@ -5,7 +5,7 @@ import 'atropos/css'
 import Atropos from 'atropos/react'
 import styled, { css } from 'styled-components'
 
-import * as breakpoint from './breakpoints'
+import * as breakpoint from './utils/breakpoints'
 
 import borderFade from '../public/fade-border.png'
 
