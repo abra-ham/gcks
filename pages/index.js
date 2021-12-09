@@ -5,6 +5,8 @@ import 'atropos/css'
 import Atropos from 'atropos/react'
 import styled, { css } from 'styled-components'
 
+import breakpoint from './breakpoints'
+
 import borderFade from '../public/fade-border.png'
 
 const CardsWrapper = styled.section`
@@ -25,6 +27,16 @@ const CardWrapper = styled.figure`
   background-size: 100% 100%;
   border-radius: 10px;
   display: flex;
+
+  @media screen and ${breakpoint.device.sm} {
+    height: 500px;
+    width: 400px;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    height: 450px;
+    width: 300px;
+  }
 `
 
 const CardContent = styled.div`
@@ -63,6 +75,15 @@ const SeparatorText = styled.p`
   font-family: 'Pixel';
   font-size: 4rem;
   margin: 2rem 4rem;
+
+  @media screen and ${breakpoint.device.sm} {
+    margin: 1rem 2rem;
+    font-size: 2rem;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    font-size: 1.5rem;
+  }
 `
 
 const SeparatorWrapper = styled.div`
@@ -72,6 +93,14 @@ const SeparatorWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 6rem 0 1rem;
+
+  @media screen and ${breakpoint.device.sm} {
+    margin-top: 2rem;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    margin: 2rem 0 0rem;
+  }
 `
 
 const Separator = ({ text }) => (
@@ -87,6 +116,14 @@ const NavLink = styled.a`
   font-family: 'Poppins-Bold';
   color: white;
   text-transform: uppercase;
+
+  @media screen and ${breakpoint.device.sm} {
+    font-size: 1.4rem;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    margin-right: 1rem;
+  }
 `
 
 const NavWrapper = styled.nav`
@@ -94,6 +131,12 @@ const NavWrapper = styled.nav`
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+
+  @media screen and ${breakpoint.device.sm} {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
 
 const NavSeparator = styled.div`
@@ -102,6 +145,10 @@ const NavSeparator = styled.div`
   background-image: url('/fade-border.png');
   background-size: contain;
   margin: 0 2rem;
+
+  @media screen and ${breakpoint.device.xs} {
+    display: none;
+  }
 `
 
 const Nav = () => {
@@ -148,8 +195,7 @@ const BannerWrapper = styled.section`
   padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+
   flex-wrap: wrap;
 
   span {
@@ -157,8 +203,14 @@ const BannerWrapper = styled.section`
     color: white;
   }
 
-  img {
-    margin: 4rem;
+  @media screen and ${breakpoint.device.sm} {
+    padding: 1rem 0;
+    max-width: 100%;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    flex-direction: row;
+    max-height: 70vh;
   }
 `
 
@@ -170,6 +222,10 @@ const AtroposWrapper = styled.section`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
   background-color: #140206;
   height: auto;
+
+  @media screen and ${breakpoint.device.xs} {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 97%, 0 100%);
+  }
 `
 
 const GeckoImageWrapper = styled.figure`
@@ -178,6 +234,21 @@ const GeckoImageWrapper = styled.figure`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and ${breakpoint.device.sm} {
+    img {
+      margin-top: -100px;
+    }
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    width: 100%;
+    height: auto;
+  }
 `
 
 const FooterWrapper = styled.footer`
@@ -194,6 +265,16 @@ const BoldBigText = styled.p`
   margin: 5px auto 0;
   max-width: 80%;
   text-align: center;
+
+  @media screen and ${breakpoint.device.sm} {
+    font-size: 3rem;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    margin-top: 2rem;
+    font-size: 2rem;
+    max-width: 90%;
+  }
 `
 
 const RegularBigText = styled.p`
@@ -203,6 +284,17 @@ const RegularBigText = styled.p`
   margin: 5px auto 20px;
   max-width: 80%;
   text-align: center;
+
+  @media screen and ${breakpoint.device.sm} {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    max-width: 90%;
+  }
 `
 
 const BannerTop = styled.div`
@@ -210,15 +302,53 @@ const BannerTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  flex-wrap: wrap;
+
+  @media screen and ${breakpoint.device.sm} {
+    width: 100%;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    flex-direction: column-reverse;
+  }
 `
 
 const BannerBottom = styled.div`
-  width: 100%;
+  max-height: 10%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and ${breakpoint.device.sm} {
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media screen and ${breakpoint.device.xs} {
+    height: 60%;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `
+
+const GloriousLogo = () => (
+  <img
+    data-atropos-offset="-2"
+    layout="fixed"
+    src="/banner-logo.png"
+    alt="Cutest Gecko ever"
+    width={480}
+    height={208}
+  />
+)
 
 const Banner = () => {
   return (
@@ -236,16 +366,9 @@ const Banner = () => {
             <Nav />
           </BannerTop>
           <BannerBottom>
-            <Image
-              data-atropos-offset="-2"
-              layout="fixed"
-              src="/banner-logo.png"
-              alt="Cutest Gecko ever"
-              width={480}
-              height={208}
-            />
+            <GloriousLogo />
             <GeckoImageWrapper>
-              <Image
+              <img
                 data-atropos-offset="1"
                 layout="fixed"
                 src="/gecko.png"
