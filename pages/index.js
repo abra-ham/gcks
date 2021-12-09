@@ -5,7 +5,17 @@ import 'atropos/css'
 import Atropos from 'atropos/react'
 import styled, { css } from 'styled-components'
 
-import * as breakpoint from './utils/breakpoints'
+const size = {
+  xs: '375px',
+  sm: '768px',
+  lg: '1200px',
+}
+
+const device = {
+  xs: `(max-width: ${size.xs})`,
+  sm: `(max-width: ${size.sm})`,
+  lg: `(max-width: ${size.lg})`,
+}
 
 import borderFade from '../public/fade-border.png'
 
@@ -28,12 +38,12 @@ const CardWrapper = styled.figure`
   border-radius: 10px;
   display: flex;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     height: 500px;
     width: 400px;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     height: 450px;
     width: 300px;
   }
@@ -76,12 +86,12 @@ const SeparatorText = styled.p`
   font-size: 4rem;
   margin: 2rem 4rem;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     margin: 1rem 2rem;
     font-size: 2rem;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     font-size: 1.5rem;
   }
 `
@@ -94,11 +104,11 @@ const SeparatorWrapper = styled.div`
   align-items: center;
   margin: 6rem 0 1rem;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     margin-top: 2rem;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     margin: 2rem 0 0rem;
   }
 `
@@ -117,11 +127,11 @@ const NavLink = styled.a`
   color: white;
   text-transform: uppercase;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     font-size: 1.4rem;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     margin-right: 1rem;
   }
 `
@@ -132,7 +142,7 @@ const NavWrapper = styled.nav`
   align-items: center;
   cursor: pointer;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -146,7 +156,7 @@ const NavSeparator = styled.div`
   background-size: contain;
   margin: 0 2rem;
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     display: none;
   }
 `
@@ -203,12 +213,12 @@ const BannerWrapper = styled.section`
     color: white;
   }
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     padding: 1rem 0;
     max-width: 100%;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     flex-direction: row;
     max-height: 70vh;
   }
@@ -223,7 +233,7 @@ const AtroposWrapper = styled.section`
   background-color: #140206;
   height: auto;
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 97%, 0 100%);
   }
 `
@@ -235,13 +245,13 @@ const GeckoImageWrapper = styled.figure`
   justify-content: center;
   align-items: center;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     img {
       margin-top: -100px;
     }
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     img {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -266,11 +276,11 @@ const BoldBigText = styled.p`
   max-width: 80%;
   text-align: center;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     font-size: 3rem;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     margin-top: 2rem;
     font-size: 2rem;
     max-width: 90%;
@@ -285,12 +295,12 @@ const RegularBigText = styled.p`
   max-width: 80%;
   text-align: center;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     font-size: 1.5rem;
     margin-bottom: 5px;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     margin-top: 2rem;
     font-size: 1.5rem;
     max-width: 90%;
@@ -304,11 +314,11 @@ const BannerTop = styled.div`
   justify-content: flex-end;
   flex-wrap: wrap;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     width: 100%;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     flex-direction: column-reverse;
   }
 `
@@ -323,12 +333,12 @@ const BannerBottom = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 
-  @media screen and ${breakpoint.device.sm} {
+  @media screen and ${device.sm} {
     justify-content: center;
     width: 100%;
   }
 
-  @media screen and ${breakpoint.device.xs} {
+  @media screen and ${device.xs} {
     height: 60%;
     width: 100%;
 
