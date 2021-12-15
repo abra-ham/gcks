@@ -5,6 +5,8 @@ import 'atropos/css'
 import Atropos from 'atropos/react'
 import styled, { css } from 'styled-components'
 
+import { GeckoShowcase } from '../components/GeckoShowcase'
+
 const size = {
   xs: '375px',
   sm: '768px',
@@ -166,7 +168,7 @@ const Nav = () => {
     <NavWrapper>
       <NavLink data-atropos-offset="16">Litepaper</NavLink>
       <NavSeparator />
-      <NavLink data-atropos-offset="16">Raodmap</NavLink>
+      <NavLink data-atropos-offset="16">Roadmap</NavLink>
       <NavSeparator />
       <NavLink data-atropos-offset="16">FAQ</NavLink>
       <NavSeparator />
@@ -226,6 +228,7 @@ const BannerWrapper = styled.section`
 
 const Main = styled.main`
   min-height: 100vh;
+  overflow: hidden;
 `
 
 const AtroposWrapper = styled.section`
@@ -425,6 +428,7 @@ export default function Home() {
           The next hottest Solana NFT Collection conformed by unique and
           Glorious Geckos waiting to move into your wallet.
         </RegularBigText>
+        <GeckoShowcase />
         <Separator text="FAQ" />
         <CardsWrapper>
           <Card text="Hello" title="Us" />
