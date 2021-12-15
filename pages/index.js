@@ -130,11 +130,8 @@ const NavLink = styled.a`
   text-transform: uppercase;
 
   @media screen and ${device.sm} {
-    font-size: 1.4rem;
-  }
-
-  @media screen and ${device.xs} {
-    margin-right: 1rem;
+    font-size: 1.8rem;
+    margin: 0 1rem;
   }
 `
 
@@ -148,6 +145,7 @@ const NavWrapper = styled.nav`
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 1rem;
   }
 `
 
@@ -157,6 +155,10 @@ const NavSeparator = styled.div`
   background-image: url('/fade-border.png');
   background-size: contain;
   margin: 0 2rem;
+
+  @media screen and ${device.sm} {
+    display: none;
+  }
 
   @media screen and ${device.xs} {
     display: none;
@@ -320,6 +322,8 @@ const BannerTop = styled.div`
   @media screen and ${device.lg} {
     width: 100%;
     justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
   }
 
   @media screen and ${device.xs} {
