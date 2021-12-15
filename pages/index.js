@@ -204,7 +204,7 @@ const BannerWrapper = styled.section`
     rgba(113, 24, 33, 1) 0%,
     rgba(20, 2, 6, 1) 100%
   );
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
 
@@ -248,7 +248,7 @@ const GeckoImageWrapper = styled.figure`
   justify-content: center;
   align-items: center;
 
-  @media screen and ${device.sm} {
+  @media screen and ${device.lg} {
     img {
       margin-top: -100px;
     }
@@ -317,8 +317,9 @@ const BannerTop = styled.div`
   justify-content: flex-end;
   flex-wrap: wrap;
 
-  @media screen and ${device.sm} {
+  @media screen and ${device.lg} {
     width: 100%;
+    justify-content: center;
   }
 
   @media screen and ${device.xs} {
