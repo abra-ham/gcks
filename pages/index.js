@@ -150,7 +150,7 @@ const NavWrapper = styled.nav`
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 1rem;
+    margin: 0;
   }
 `
 
