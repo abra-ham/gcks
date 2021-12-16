@@ -6,6 +6,7 @@ import Atropos from 'atropos/react'
 import styled, { css } from 'styled-components'
 
 import { GeckoShowcase } from '../components/GeckoShowcase'
+import { Footer } from '../components/Footer'
 
 const size = {
   xs: '375px',
@@ -87,14 +88,18 @@ const SeparatorText = styled.p`
   font-family: 'Pixel';
   font-size: 4rem;
   margin: 2rem 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
 
   @media screen and ${device.sm} {
     margin: 1rem 2rem;
     font-size: 2rem;
+    letter-spacing: 0.5rem;
   }
 
   @media screen and ${device.xs} {
     font-size: 1.5rem;
+    letter-spacing: 0.1rem;
   }
 `
 
@@ -116,7 +121,7 @@ const SeparatorWrapper = styled.div`
 `
 
 const Separator = ({ text }) => (
-  <SeparatorWrapper>
+  <SeparatorWrapper id={text}>
     <SeparatorLine left />
     <SeparatorText>{text}</SeparatorText>
     <SeparatorLine />
@@ -170,9 +175,13 @@ const Nav = () => {
     <NavWrapper>
       <NavLink data-atropos-offset="16">Litepaper</NavLink>
       <NavSeparator />
-      <NavLink data-atropos-offset="16">Roadmap</NavLink>
+      <NavLink data-atropos-offset="16" href="#Roadmap">
+        Roadmap
+      </NavLink>
       <NavSeparator />
-      <NavLink data-atropos-offset="16">FAQ</NavLink>
+      <NavLink data-atropos-offset="16" href="#FAQ">
+        FAQ
+      </NavLink>
       <NavSeparator />
       <NavLink data-atropos-offset="16">Team</NavLink>
     </NavWrapper>
@@ -182,6 +191,7 @@ const Nav = () => {
 const Card = ({ text, title = 'Title' }) => {
   return (
     <Atropos
+      rotateTouch={false}
       highlight={false}
       shadow
       shadowScale={1}
@@ -264,13 +274,6 @@ const GeckoImageWrapper = styled.figure`
     width: 100%;
     height: auto;
   }
-`
-
-const FooterWrapper = styled.footer`
-  clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);
-  background-image: url('/fade-border.png');
-  background-size: 100% 100%;
-  height: 250px;
 `
 
 const BoldBigText = styled.p`
@@ -363,8 +366,8 @@ const GloriousLogo = () => (
     layout="fixed"
     src="/banner-logo.png"
     alt="Cutest Gecko ever"
-    width={480}
-    height={208}
+    width={620}
+    height={308}
   />
 )
 
@@ -372,6 +375,7 @@ const Banner = () => {
   return (
     <AtroposWrapper>
       <Atropos
+        rotateTouch={false}
         highlight={false}
         rotateYMax="2"
         rotateXMax="2"
@@ -434,6 +438,8 @@ export default function Home() {
           Glorious Geckos waiting to move into your wallet.
         </RegularBigText>
         <GeckoShowcase />
+        <Separator text="Roadmap" />
+        <RegularBigText>Coming soon...</RegularBigText>
         <Separator text="FAQ" />
         <CardsWrapper>
           <Card text="Hello" title="Us" />
@@ -441,9 +447,7 @@ export default function Home() {
           <Card text="Hello!" title="Geckos" />
         </CardsWrapper>
       </Main>
-      <FooterWrapper>
-        <span>Hello</span>
-      </FooterWrapper>
+      <Footer />
     </div>
   )
 }
