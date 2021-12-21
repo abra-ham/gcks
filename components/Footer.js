@@ -67,7 +67,7 @@ export const Footer = () => (
       <TwitterLogo src="../twitter.png" />
       <Text>@GloriousGeckos</Text>
     </Wrapper>
-    <Text>Hello</Text>
+    <Text>Glorious Geckos 2021</Text>
     <Wrapper target="_blank" rel="noreferrer noopener">
       <DiscordLogo src="../discord.png" />
       <Text>Join us on discord</Text>
