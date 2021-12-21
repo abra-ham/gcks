@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import 'atropos/css'
 import Atropos from 'atropos/react'
@@ -297,11 +296,12 @@ const BoldBigText = styled.p`
 
 const RegularBigText = styled.p`
   font-size: 2rem;
+  text-align: justify;
   font-family: 'Poppins-Regular';
   text-transform: uppercase;
   margin: 5px auto 20px;
   max-width: 80%;
-  text-align: center;
+  color: #42413e;
 
   @media screen and ${device.sm} {
     font-size: 1.5rem;
@@ -357,6 +357,22 @@ const BannerBottom = styled.div`
       width: 100%;
       height: auto;
     }
+  }
+`
+
+const ComingSoonText = styled.p`
+  margin: 6rem auto;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Poppins-Bold';
+
+  @media screen and ${device.sm} {
+    font-size: 2.7rem;
+  }
+
+  @media screen and ${device.xs} {
+    font-size: 1.5rem;
   }
 `
 
@@ -434,17 +450,60 @@ export default function Home() {
         <Banner />
         <BoldBigText>Meet our glorious geckos NFTs!</BoldBigText>
         <RegularBigText>
-          The next hottest Solana NFT Collection conformed by unique and
-          Glorious Geckos waiting to move into your wallet.
+          In the minds of our creators and devs we found out a great part of
+          what PixelArt means. Without taking advantage of this, we as a young
+          team but not inexperienced one decided to give us a chance to show all
+          the communities our most warm welcome to join us and enjoy every
+          single piece of Art that we have created for you. And so even we want
+          to tell you the story of this encourage project of 1,111 NFTs.
         </RegularBigText>
         <GeckoShowcase />
+        <BoldBigText>How to become glorious</BoldBigText>
+        <RegularBigText>
+          Everybody knows the story of Geckos when they arrived to the Galaxy
+          and became 3D, but not everyone knows how were they when it all
+          started. When the life of this community started and the years began
+          to count (about 3 million years ago) this little group of Glorious
+          Geckos were living a Pixel life in all its matters. Pixel houses,
+          pixel thinks and things, everything was pixel, there was no space for
+          any difference between each other composition, the only part that
+          matters were who got the best faction in, the most glorious Gecko that
+          can represent and face its faction in all the battles and missions
+          that were assigned to each team. In order to become the most glorious
+          Gecko each one by itself together with his teammates needed to face
+          many challenges, defeat evil bosses and take riches tributes to the
+          ancient gecko called "The Legendary One". Only him could decide who
+          really deserved to be the next gloriously Gecko and be remembered as a
+          leader of his strong faction. The prizes? Well, the prizes were
+          exactly what they really ever wanted, to become father and choose a
+          divine life as a faction leader. This process was not so easy at all,
+          each faction has its own issues to face and of course its own DNA
+          differences. In first instance we had the living faction geckos called
+          "Pure Geckos" in second instance we had the evil ones called "Helling
+          Geckos" in third instance we had the death ones called "Z-Geckos" in
+          fourth instance we had the multiverse ones called "Alien Geckos". Of
+          course, we got hybrids, hybrids got powers from different factions
+          staying together and founding the last resistance of their crew called
+          "Insane Hybrids". In this multi verse each faction needs to join
+          forces and determinate which team will be last one standing. Please
+          enjoy our super natura
+        </RegularBigText>
         <Separator text="Roadmap" />
-        <RegularBigText>Coming soon...</RegularBigText>
+        <ComingSoonText>Coming soon...</ComingSoonText>
         <Separator text="FAQ" />
         <CardsWrapper>
-          <Card text="Hello" title="Us" />
-          <Card text="Hello!" title="FAQ" />
-          <Card text="Hello!" title="Geckos" />
+          <Card
+            text="It is a pixel art project made up of 1,111 NFTs."
+            title="What is Glorious Geckos?"
+          />
+          <Card
+            text="It's a strong community backed by holders and diamond hands that join forces against the PH and flippers!"
+            title="What are Glorious Geckos?"
+          />
+          <Card
+            text="Due to our low supply and mint cost and a extremely strong DAO, we will make everyone wish to have at least one on their wallets! Also, aren't they cute?"
+            title="Why mint Glorious Geckos?"
+          />
         </CardsWrapper>
       </Main>
       <Footer />

@@ -26,14 +26,14 @@ const FooterWrapper = styled.footer`
 
 const Wrapper = styled.a`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 `
 
 const Text = styled.p`
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Pixel';
   color: white;
   text-transform: uppercase;
@@ -47,6 +47,16 @@ const Text = styled.p`
   }
 `
 
+const DiscordLogo = styled.img`
+  height: 50px;
+  width: 50px;
+`
+
+const TwitterLogo = styled.img`
+  height: 40px;
+  width: 50px;
+`
+
 export const Footer = () => (
   <FooterWrapper>
     <Wrapper
@@ -54,10 +64,12 @@ export const Footer = () => (
       target="_blank"
       rel="noreferrer noopener"
     >
+      <TwitterLogo src="../twitter.png" />
       <Text>@GloriousGeckos</Text>
     </Wrapper>
     <Text>Hello</Text>
     <Wrapper target="_blank" rel="noreferrer noopener">
+      <DiscordLogo src="../discord.png" />
       <Text>Join us on discord</Text>
     </Wrapper>
   </FooterWrapper>

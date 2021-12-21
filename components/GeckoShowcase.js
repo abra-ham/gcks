@@ -15,7 +15,7 @@ const Gecko13 = '../assets/Gecko13.jpg'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  margin-top: 6rem;
+  margin: 6rem 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
