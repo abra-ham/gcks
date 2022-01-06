@@ -376,6 +376,10 @@ const ComingSoonText = styled.p`
   }
 `
 
+const Roadmap = styled.img`
+  width: 100%;
+`
+
 const GloriousLogo = () => (
   <img
     data-atropos-offset="-2"
@@ -489,7 +493,7 @@ export default function Home() {
           enjoy our super natura
         </RegularBigText>
         <Separator text="Roadmap" />
-        <ComingSoonText>Coming soon...</ComingSoonText>
+        <Roadmap layout="fixed" src="/roadmap.jpg" alt="Roadmap" />
         <Separator text="FAQ" />
         <CardsWrapper>
           <Card
