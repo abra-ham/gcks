@@ -459,7 +459,7 @@ export default function Home() {
           team but not inexperienced one decided to give us a chance to show all
           the communities our most warm welcome to join us and enjoy every
           single piece of Art that we have created for you. And so even we want
-          to tell you the story of this encourage project of 1,111 NFTs.
+          to tell you the story of this encourage project of 444 NFTs.
         </RegularBigText>
         <GeckoShowcase />
         <BoldBigText>How to become glorious</BoldBigText>
@@ -497,7 +497,7 @@ export default function Home() {
         <Separator text="FAQ" />
         <CardsWrapper>
           <Card
-            text="It is a pixel art project made up of 1,111 NFTs."
+            text="It is a pixel art project made up of 444 NFTs."
             title="What is Glorious Geckos?"
           />
           <Card
